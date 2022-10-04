@@ -31,11 +31,11 @@
 
 				scene.add( new THREE.AmbientLight( 0xf0f0f0 ) );
 				const light = new THREE.SpotLight( 0xffffff, 1.5 );
-				light.position.set( 0, 1500, 200 );
-				light.angle = Math.PI * 0.2;
+				light.position.set( 900, 1500, 100 );
+				light.angle = Math.PI * 0.1;
 				light.castShadow = true;
 				light.shadow.camera.near = 200;
-				light.shadow.camera.far = 2000;
+				light.shadow.camera.far = 22000;
 				light.shadow.bias = - 0.000222;
 				light.shadow.mapSize.width = 1024;
 				light.shadow.mapSize.height = 1024;
@@ -66,7 +66,6 @@
 
                 let sphere = new THREE.SphereGeometry( 100, 9, 14 );
                 sphere.mesh = new THREE.Mesh( sphere, new THREE.MeshPhongMaterial( { color: 0xff0000 } ) );
-
 				sphere.mesh.castShadow = true;
                 sphere.mesh.receiveShadow = true;
                 sphere.mesh.position.set(0, 200, 10);
@@ -91,3 +90,4 @@
     </script>
 </body>
 </html>
+
